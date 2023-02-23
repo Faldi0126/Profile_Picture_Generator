@@ -12,17 +12,13 @@
       </div>
     </div>
     <!-- Page title ends -->
-    <!-- center the div -->
+
     <div class="flex flex-col justify-center items-center">
 
-      <div class="flex justify-center rounded-xl shadow-xl relative bg-[#FCFAFA] z-10 -mt-8 mb-8 p-5 w-1/3">
+      <div class="flex justify-center rounded-xl shadow-xl relative bg-[#FCFAFA] z-10 -mt-8 mb-8 p-5 w-4/5 lg:w-1/3">
 
         <form action="" @submit.prevent="inputName">
 
-
-          <!-- <input
-            class="flex text-gray-600 dark:text-gray-400 focus:outline-none focus:border focus:border-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 bg-white font-light w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
-            placeholder="Masukka nama kamu" /> -->
 
 
           <input v-model="text" type="text" id="first_name"
@@ -36,7 +32,6 @@
             </button>
           </div>
 
-          <!-- if the text is empty div is hidden -->
           <div v-if="roboAddress" class="flex justify-center p-5 mt-5">
 
             <img class="rounded-full h-48 lg:h-72 w-48 lg:w-72 shadow-xl" :src="roboAddress" alt="">
@@ -50,7 +45,6 @@
       </div>
 
 
-      <!-- clear the input after click -->
 
 
     </div>
