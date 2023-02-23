@@ -15,7 +15,7 @@
     <!-- center the div -->
     <div class="flex flex-col justify-center items-center">
 
-      <div class="flex justify-center rounded-xl shadow-xl relative bg-white z-10 -mt-8 mb-8 p-5 w-1/2">
+      <div class="flex justify-center rounded-xl shadow-xl relative bg-[#FCFAFA] z-10 -mt-8 mb-8 p-5 w-1/3">
 
         <form action="" @submit.prevent="inputName">
 
@@ -37,9 +37,9 @@
           </div>
 
           <!-- if the text is empty div is hidden -->
-          <div v-if="text" class="flex justify-center p-5 mt-10">
+          <div v-if="roboAddress" class="flex justify-center p-5 mt-5">
 
-            <img class="rounded-full h-48 lg:h-72 w-48 lg:w-72" :src="roboAddress" alt="">
+            <img class="rounded-full h-48 lg:h-72 w-48 lg:w-72 shadow-xl" :src="roboAddress" alt="">
 
 
           </div>
@@ -63,12 +63,13 @@ export default {
   data() {
     return {
       text: "",
-      roboAddress: `https://robohash.org/${this.text}.png`,
+      roboAddress: "",
     };
   },
   methods: {
     inputName() {
-      console.log(this.text);
+      this.roboAddress = `https://robohash.org/${this.text}.png`;
+      this.text = "";
     },
   },
 
